@@ -1,33 +1,11 @@
 import java.util.*;
-class bankAccount1 {
-    Scanner sc = new Scanner(System.in);
-    int accountNumber;
-    private double balance;
-    private String name;    
-    bankAccount1(int accountNumber, double balance, String name) {
-        this.accountNumber = accountNumber;
-        this.balance = balance;
-        this.name = name;
-    }
-    public void deposit(double amount) {
-        balance += amount;
-    }
-    public void withdrawn(double amount) {
-        balance -= amount;
-    }
-    public void printAccount() {
-        System.out.println("Account Number: " + accountNumber);
-        System.out.println("Balance: " + balance);
-        System.out.println("Name: " + name);
-    }
-}
 class ass8_10
 {
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args)
     {
-        Scanner sc = new Scanner(System.in);
-        bankAccount1[] b;
-        b = new bankAccount1[10];
+        account12[] b;
+        b = new account12[10];
         int n = 0;
         while(true)
         {
@@ -51,7 +29,7 @@ class ass8_10
                         System.out.println("Enter the name");
                         String name = sc.next();
                         sc.nextLine();
-                        b[n] = new bankAccount1(accountNumber, balance, name);
+                        b[n] = new account12(accountNumber, balance, name);
                         n++;
                     }
                     else
@@ -71,7 +49,7 @@ class ass8_10
                             System.out.println("Enter the name");
                             String name = sc.next();
                             sc.nextLine();
-                            b[n] = new bankAccount1(accountNumber, balance, name);
+                            b[n] = new account12(accountNumber, balance, name);
                             n++;
                         } 
                     }
